@@ -8,21 +8,22 @@ Build a page which shows this list of users shows the properties
 Also we should be able to update Full Name of the user.
 Don’t forget to handle exceptions.
 You can have a mock server, assume the API is there and returns you the desired objects.
-Optional (would be good if implemented):
+Optional (would be good if implemented)
 Additional properties for users status (online/offline), last_seen_at (a timestamp) needs to be supported by
 websockets, when a user goes offline the change should reflect on the front end immediately without
 refreshing the page (also color the status in green if online and in red if offline)
 
-- one screen
-- api resource: username, full_name
-- show list of users, properties
-- ability to update full_name
+✔ fetch all users @done(18-05-21 08:36)
+✔ show list of users, properties @done(18-05-21 08:36)
+✔ update user's fullname @done(18-05-21 09:41)
+✔ ability to update full_name @done(18-05-21 09:41)
+
 - handle exceptions
 - optional: add online/offline, last_seen_at props; with websockets
   - green if online, red otherwise
-
 - add spinner
 - add testing
   - jest
 - add design and stylization
   - material ui
+- add props validation

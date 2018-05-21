@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getUsers } from 'Actions/';
+import { getUsers, updateUser } from 'Actions/';
 
 import UsersList from 'Components/users_list';
 
@@ -9,11 +9,11 @@ class Users extends Component {
     this.props.getUsers();
   }
   render() {
-    const { users, loading } = this.props;
+    const { users, loading, update } = this.props;
     if (loading) {
-      return <div>...</div>;
+      return <div>Loading...</div>;
     }
-    return <UsersList users={users} />;
+    return <UsersList users={users} update={update} />;
   }
 }
 
@@ -26,6 +26,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
   getUsers() { dispatch(getUsers()); },
+  update(user) { dispatch(updateUser(user)); },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users);
