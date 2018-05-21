@@ -1,0 +1,27 @@
+Build an application using React as if this application was a big and real world application: but only one
+screen needs to be implemented
+Assume there exists an API resource of users with properties: username, full_name
+GET /api/users/ //returns you a list of users
+GET /api/users/:username/ // returns you the user with that username
+PUT /api/users/:username/ // updates the user with that username
+Build a page which shows this list of users shows the properties
+Also we should be able to update Full Name of the user.
+Don’t forget to handle exceptions.
+You can have a mock server, assume the API is there and returns you the desired objects.
+Optional (would be good if implemented):
+Additional properties for users status (online/offline), last_seen_at (a timestamp) needs to be supported by
+websockets, when a user goes offline the change should reflect on the front end immediately without
+refreshing the page (also color the status in green if online and in red if offline)
+
+- one screen
+- api resource: username, full_name
+- show list of users, properties
+- ability to update full_name
+- handle exceptions
+- optional: add online/offline, last_seen_at props; with websockets
+  - green if online, red otherwise
+
+- add testing
+  - jest
+- add design and stylization
+  - material ui
