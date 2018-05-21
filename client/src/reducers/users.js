@@ -1,30 +1,12 @@
 import { types } from 'Actions';
 
-const data = [
-  {
-    username: 'John',
-    fullName: 'John Doe',
-  },
-  {
-    username: 'Jane',
-    fullName: 'Jane Doe',
-  },
-  {
-    username: 'Brad',
-    fullName: 'Brad Doe',
-  },
-  {
-    username: 'Billy',
-    fullName: 'Billy Doe',
-  },
-];
-
-
-const nodes = (state = data, action) => {
+const users = (state = [], action) => {
   switch (action.type) {
+    case types.GET_ALL_USERS_SUCCESS:
+      return [...action.users];
     default:
       return state;
   }
 };
 
-export default nodes;
+export default users;

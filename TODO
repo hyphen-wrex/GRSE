@@ -21,6 +21,7 @@ refreshing the page (also color the status in green if online and in red if offl
 - optional: add online/offline, last_seen_at props; with websockets
   - green if online, red otherwise
 
+- add spinner
 - add testing
   - jest
 - add design and stylization
